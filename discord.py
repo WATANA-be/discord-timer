@@ -14,7 +14,7 @@ async def on_voice_state_update(before, after):
 
   if(before.voice_channel is None):
     pretime_dict[after.name] = datetime.datetime.now()
-  elif(after.voice_channel is None):
+  else(after.voice_channel is None):
     duration_time = pretime_dict[before.name] - datetime.datetime.now()
     duration_time_adjust = int(duration_time.total_seconds()) * -1
 
